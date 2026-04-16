@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary SPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1>Wordly</h1>
+
+    <div class="controls">
+      <button id="darkModeBtn">nightmode</button>
+      <button id="increaseText">A+</button>
+      <button id="decreaseText">A-</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- SEARCH -->
+    <div class="card">
+      <h2>Search</h2>
+
+      <form id="searchForm">
+        <input type="text" id="wordInput" placeholder="Type a word..." />
+        <button type="submit">Search</button>
+      </form>
+
+      <h3>Recent</h3>
+      <ul id="recentList"></ul>
+
+      <button id="clearHistory">Clear History</button>
+    </div>
+
+    <!-- RESULT -->
+    <div class="card">
+      <div id="result">Search a word...</div>
+      <div id="error"></div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
