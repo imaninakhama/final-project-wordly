@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let recentWords = [];
 
-  /* SEARCH */
+  //searching//
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addToRecent(word);
   });
 
-  /* FETCH API */
+  
   function fetchWord(word) {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
       .then(res => res.json())
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  /* RECENT WORDS */
+  
   function addToRecent(word) {
     if (!recentWords.includes(word)) {
       recentWords.unshift(word);
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* 🔥 CLEAR HISTORY */
+  
   clearBtn.addEventListener("click", function () {
     recentWords = [];
     recentList.innerHTML = "";
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle("dark");
   });
 
-  /* TEXT SIZE */
+  
   const increaseBtn = document.getElementById("increaseText");
   const decreaseBtn = document.getElementById("decreaseText");
 
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* 🔁 GLOBAL (for synonym click) */
+
 function searchSynonym(word) {
   fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
     .then(res => res.json())
